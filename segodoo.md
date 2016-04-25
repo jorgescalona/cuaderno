@@ -58,8 +58,16 @@ Menu access definition
 1.1 Dominions:[('name','=','Cristian')]
 1. Nivel Menues 
 1. Nivel Vistas
+1. Carpeta Security
+    * security.xml: res.group, ir.rules
+    * ir.model.access.csv: CSV con reglas de acceso.
+1. Funciones de Objetos:
+    * def f(self, cr, uid, ids, ... context=None, ...)
+    * cr: cursor de la bd.
+    * uid: User ID.
+    * ids: Instancias del objeto.
 
-
+nota: importante recordar incluir los archivos security.xml en el descriptor del módulo _____openerp__.py en la sección update.
 
 ### Enlaces de interes:
 
