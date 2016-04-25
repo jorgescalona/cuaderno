@@ -67,7 +67,7 @@ Menu access definition
     * uid: User ID.
     * ids: Instancias del objeto.
 
-nota: importante recordar incluir los archivos security.xml en el descriptor del módulo _____openerp__.py en la sección update.
+nota: importante recordar incluir los archivos security.xml en el descriptor del módulo `__openerp__.py` en la sección update.
 
 ### Enlaces de interes:
 
