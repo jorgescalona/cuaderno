@@ -73,6 +73,6 @@ Enlaces de interes y que use para aprender sobre docker
 * [configurar el contenedor de odoo v9](https://github.com/docker-library/docs/tree/master/odoo)
 * [Odoo Development Essentials Book traducción de BachacoVE](http://fundamentos-de-desarrollo-en-odoo.readthedocs.org/es/latest/index.html)
 * [Odoo Argentina buen post sobre dockerizacion](http://www.odooargentina.com/page/instalar-usando-docker)
-
+* [Vídeo odoo en 7 pasos con Docker](https://www.youtube.com/watch?v=sAHRqCWb5uU)
 
 
