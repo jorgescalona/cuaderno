@@ -22,6 +22,7 @@ El elemento <report> está disponible para definir un reporte:
 
 ```
 donde:
+
 1. report_type (obligatorio)
 	qweb-pdf
 	qweb-html
