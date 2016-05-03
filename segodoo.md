@@ -68,6 +68,33 @@ Menu access definition
     * ids: Instancias del objeto.
 
 nota: importante recordar incluir los archivos security.xml en el descriptor del módulo `__openerp__.py` en la sección update.
+### Reglas de accesso a nivel de registro
+
+La propiedad multiusuario de los sistemas en Odoo puede llevar a que queramos niveles de acceso para cada usuario, para lo cual el framework proporciona **reglas de acceso a nivel de fila**, En el menú técnico está la opción **Reglas de Registro**, junto a la **Lista de Control de acceso**. Las mismas son definidas en el modelo `ir.rule`. Que se necesita: un nombre distintivo y su respectiva regla domain.
+Estas reglas pueden ser Global o para un grupo en particular. Y se definen en el archivo `security/modulo_access_rules.xml`. 
+```
+<?xml version="1.0" encoding="utf-8"?>
+    <openerp>
+        <data noupdate="1">
+            <record id="todo_task_user_rule" model="ir.rule">
+                <field name="name">ToDo Tasks only for owner</field>
+                <field name="model_id" ref="model_todo_task"/>
+                <field name="domain_force">
+                    [('create_uid','=',user.id)]
+                </field>
+                <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+            </record>
+        </data>
+    </openerp>
+
+```
+En el campo groups encontraras una expresión especial. Es un campo de relación uno a muchos, y tienen una sintaxis especial para operar con ellos. En este caso la tupla `(4,x)` indica agregar x a los registros, y x es una referencia al grupo empleados, identificado por `base.group_user`.
+
+nota: importante recordar agregar este archivo a la sección data en el descriptor` __openerp__.py`
+
+Recuerde siempre, al agregar campos en el modelo, que es necesaria una actualización del módulo. Cuando se cambia el código Python, incluyendo el archivo de manifiesto, es necesario un reinicio del servidor. Cuando se cambian archivos XML o CSV es necesaria una actualización del módulo; incluso en caso de duda, realice ambas: actualización del módulo y reinicio del servidor.
+
+
 
 ### Enlaces de interes:
 
