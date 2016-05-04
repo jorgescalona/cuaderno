@@ -5,7 +5,7 @@ Documento referencial con fines didacticos elaborado por jorgescalona @jorgemust
 RML y QWeb motores básicos para la generación de reportes en Odoo
 =================================================================
 
-Luego de repasar la información que consegui en la web sobre reportes qweb en odoo me percate que la información localizada poco me ayudaba, así que decidi seguir indagando y escribir un articulo al respecto para mi blog http://www.attakatara.wordpress.com. La finalidad es exponer publicamente una guía para aquellos entusiastas de la programación y de está maravillosa herramienta llamada Odoo.
+Luego de repasar la información que consegui en la webi, sobre reportes qweb en odoo me percate que la información localizada poco me ayudaba, así que decidi seguir indagando y escribir un articulo al respecto para mi blog http://www.attakatara.wordpress.com. La finalidad es exponer publicamente una guía para aquellos entusiastas de la programación y de está maravillosa herramienta llamada Odoo.
 
 * ¿Como hacer simples cambios a las cabeceras y pie de páginas de tus reportes RML?
 * La forma básica de como el framework de Odoo organiza los reportes y las formas.

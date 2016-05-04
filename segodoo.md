@@ -67,7 +67,7 @@ Menu access definition
     * uid: User ID.
     * ids: Instancias del objeto.
 
-nota: importante recordar incluir los archivos security.xml en el descriptor del módulo `__openerp__.py` en la sección update.
+nota: importante recordar incluir los archivos security.xml, en el descriptor del módulo `__openerp__.py` en la sección update.
 ### Reglas de accesso a nivel de registro
 
 La propiedad multiusuario de los sistemas en Odoo puede llevar a que queramos niveles de acceso para cada usuario, para lo cual el framework proporciona **reglas de acceso a nivel de fila**, En el menú técnico está la opción **Reglas de Registro**, junto a la **Lista de Control de acceso**. Las mismas son definidas en el modelo `ir.rule`. Que se necesita: un nombre distintivo y su respectiva regla domain.
