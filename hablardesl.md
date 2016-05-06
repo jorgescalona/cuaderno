@@ -29,7 +29,7 @@ Entonces entendemos que mientras no libere no es tecnología libre, ir a un blog
 No todo es así para cada regla están las excepciones y de allí podemos destacar el ejemplo de la gente de canaima (tienen repo aunque hace un rato no hacen commits sobre el, lo importante es que liberaron), Industrias DIANA y el SISB (Sistema ERP Libre y también con repos a disposición)
 
 En la "catedral y el bazar" (1997), es un ensayo a favor del software de código abierto de Eric S. Raymond ya nos explicaba que existen dos formas básicas de desarrollo. Uno convencional o estilo de desarrollo cerrado el cual denominó como "Catedral", y luego compará lo que paso con el desarrollo de Gnu/Linux a nivel global y lo denominó "Bazar", en el vislumbro técnicas de igual a igual con **períodos de publicación muy cortos y constantes solicitud de retroalimentación de personas que están fuera del proyecto**, luego de un proceso de observación de este fenómeno Eric concluye: "... cambiar las ventajas del desarrollo convencionalmente cerrado, por esa única ventaja de la crítica masiva independiente del igual, realmente parecía ganar, parecía obtener buenos resultados...".
-Siguiendo el enunciado de raymond veo con tristeza como los cargos convierten a nuestros entusiastas en avataras Catedrales Institucionales, cerrando proyectos, no liberando ni una coma de nada, pero si montando más de una foto en los rincones de su Catedral en mesas de trabajo que no llegan a nada o por lo menos no lo comparten que es lo mismo. Y es que se bazar entonces es superar el simple hecho comunicacional 2.0 del "Estamos reunidos con fulano en su Catedral", por el hemos liberado estos documentos por que queremos el aporte popular sobre los mismos, o mejor hemos puesto a disposición de todos la infraestructura y los repositorios de las tecnologías que estamos desarrollando.
+Siguiendo el enunciado de raymond veo con tristeza como los cargos convierten a nuestros entusiastas en avataras de Catedrales Institucionales, cerrando proyectos, no liberando ni una coma de nada, pero si montando más de una foto en los rincones de su Catedral en mesas de trabajo que no llegan a nada o por lo menos no lo comparten que es lo mismo. Y es que ser bazar entonces es superar el simple hecho comunicacional 2.0 del "Estamos reunidos con fulano en su Catedral", por el hemos liberado estos documentos por que queremos el aporte popular sobre los mismos, o mejor hemos puesto a disposición de todos la infraestructura y los repositorios de las tecnologías que estamos desarrollando.
 
 Necesario es destacar que bajo el modelo de bazar se han implementado proyectos tan exitosos como el kernel de linux (por solo nombrar el más emblemático), citando a Raymond mientras más gente sea co-participe de mis proyectos entonces este debe ser más exitoso, pero al parecer la consigna institucional es el celo y el velo, lo que nos hace redundar en esfuerzos y no finalizar nada en lo tangible. 
 
@@ -37,15 +37,13 @@ El presidente hace poco anuncia la adquisición de un software para hacer más e
 
 Allí se los dejo solo pa la reflexión mis compas.
 
+Enlaces de Interes relacionados:
 
-
-
-
-[catedral y el bazar](http://biblioweb.sindominio.net/telematica/catedral.html)
-[La catedral y el bazar en wikipedia](https://es.wikipedia.org/wiki/La_catedral_y_el_bazar)
-[Vídeo Catedral y bazar](https://www.youtube.com/watch?v=GGl8CRSJghE)
-[Repo de la gente de canaima](http://gitlab.canaima.softwarelibre.gob.ve/explore/projects)
-[Forja del proyecto SISB industrias Diana](http://forja.softwarelibre.gob.ve/projects/sisb/)
-[launchpad de SISB](https://launchpad.net/sisb)
+* [catedral y el bazar](http://biblioweb.sindominio.net/telematica/catedral.html)
+* [La catedral y el bazar en wikipedia](https://es.wikipedia.org/wiki/La_catedral_y_el_bazar)
+* [Vídeo Catedral y bazar](https://www.youtube.com/watch?v=GGl8CRSJghE)
+* [Repo de la gente de canaima](http://gitlab.canaima.softwarelibre.gob.ve/explore/projects)
+* [Forja del proyecto SISB industrias Diana](http://forja.softwarelibre.gob.ve/projects/sisb/)
+* [launchpad de SISB](https://launchpad.net/sisb)
 
 
