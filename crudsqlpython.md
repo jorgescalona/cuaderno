@@ -79,12 +79,12 @@ Este ultimo inserta valores en la tabla Tracks y luego los lista haciendo uso de
 
 ### Enlaces consultados:
 
-[crud en wikipedia](https://es.wikipedia.org/wiki/CRUD)
-[Sql en wikipedia](https://es.wikipedia.org/wiki/SQL)
-[sqlite en wikipedia](https://es.wikipedia.org/wiki/SQLite)
+* [crud en wikipedia](https://es.wikipedia.org/wiki/CRUD)
+* [Sql en wikipedia](https://es.wikipedia.org/wiki/SQL)
+* [sqlite en wikipedia](https://es.wikipedia.org/wiki/SQLite)
 
 ### Enlaces recomendados:
 
-[conexión y consultas a bds con python](http://librosweb.es/libro/python/capitulo_12/conectarse_a_la_base_de_datos_y_ejecutar_consultas.html)
-[conexión a bds con python, postgres y mysql](http://www.python.org.ar/wiki/DbApi)
+* [conexión y consultas a bds con python](http://librosweb.es/libro/python/capitulo_12/conectarse_a_la_base_de_datos_y_ejecutar_consultas.html)
+* [conexión a bds con python, postgres y mysql](http://www.python.org.ar/wiki/DbApi)
 
