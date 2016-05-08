@@ -31,14 +31,18 @@ Elimina de la tabla user el registro coincidente con la expresión que le sigue 
 `UPDATE users SET name='pedro' WHERE email='jorge@dominio'`
 actualiza la tabla user y sustituye el valor del campo name para el registro coincidente con la condición despues del WHERE.
 
-** Listar o leer registros de la bd:**
+**Listar o leer registros de la bd:**
+
 `SELECT * FROM users`
+
 Lee todas las columnas de la tabla users
 
 `SELECT * FROM users WHERE email='jorge@dominio'`
+
 lee las columnas que conincidan con la condición luego del WHERE.
 
 `SELECT * FROM users ORDER BY email'`
+
 Lista todas las columnas de la tabla users y las ordena por el campo email.
 
 ### Ejemplos de scrpits en python que interactuan con bd sqlite:
