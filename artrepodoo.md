@@ -1,6 +1,6 @@
 Este documento es de libre acceso y uso bajo los términos expuestos en la licencia: Atribución-CompartirIgual 3.0 Venezuela (CC BY-SA 3.0 VE), https://creativecommons.org/licenses/by-sa/3.0/ve/ se agrega una copia de la misma en este repositorio.
 
-Documento referencial con fines didacticos elaborado por jorgescalona @jorgemustaine jorgescalona@riseup.net.
+Documento referencial con fines didácticos elaborado por jorgescalona @jorgemustaine jorgescalona@riseup.net.
 
 RML y QWeb motores básicos para la generación de reportes en Odoo
 =================================================================
@@ -13,7 +13,7 @@ Luego de repasar la información que consegui en la web, sobre reportes qweb en 
 
 Lo primero que debemos hacer es loguearnos como administrador en Odoo y comenzar a editar las cabeceras y pie de página, nos vamos a configuración y seleccionamos compañias modificamos la información general y luego pasamos a la pestaña Configuración de informes, allí podremos ver el XML que se usa para crear las plantillas para los reportes. Allí Odoo nos permitirá seleccionar el formato del papel y la fuente. Para quienes esten familiarizados con RML o XML este código será muy familiar.
 
-![Diagrama de el motor de reportes en OpenERP](/home/jorge/cuaderno/reportengine.png)
+![Diagrama de el motor de reportes en OpenERP](https://attakatara.files.wordpress.com/2016/05/reportengine.png)
 
 ### RML (Report Markup Language)
 
