@@ -1,12 +1,12 @@
 
 Este documento es de libre acceso y uso bajo los términos expuestos en la licencia: Atribución-CompartirIgual 3.0 Venezuela (CC BY-SA 3.0 VE), https://creativecommons.org/licenses/by-sa/3.0/ve/ se agrega una copia de la misma en este repositorio.
 
-Documento referencial con fines didacticos elaborado por jorgescalona @jorgemustaine jorgescalona@riseup.net.
+Documento referencial con fines didácticos elaborado por jorgescalona @jorgemustaine jorgescalona@riseup.net.
 
 Entorno de desarrollo virtual de python o virtenv
 =================================================
 
-Es una herramienta utíl para mantener un entorno de desarrollo ordenado. Lo que hace es aislar una configuración con base de cada proyecto. Lo que en la  prática se traduce a espacios virtuales donde los cambios realizados no afectanal entorno general del equipo y esto ya va genial.
+Es una herramienta útil para mantener un entorno de desarrollo ordenado. Lo que hace es aislar una configuración con base de cada proyecto. Lo que en la  prática se traduce a espacios virtuales donde los cambios realizados no afectanal entorno general del equipo y esto ya va genial.
 
 ### Instalar virtualenv vía pip
 

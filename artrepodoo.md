@@ -13,6 +13,8 @@ Luego de repasar la información que consegui en la web, sobre reportes qweb en 
 
 Lo primero que debemos hacer es loguearnos como administrador en Odoo y comenzar a editar las cabeceras y pie de página, nos vamos a configuración y seleccionamos compañias modificamos la información general y luego pasamos a la pestaña Configuración de informes, allí podremos ver el XML que se usa para crear las plantillas para los reportes. Allí Odoo nos permitirá seleccionar el formato del papel y la fuente. Para quienes esten familiarizados con RML o XML este código será muy familiar.
 
+![Diagrama de el motor de reportes en OpenERP](/home/jorge/cuaderno/reportengine.png)
+
 ### RML (Report Markup Language)
 
 En versiones previas todos los documentos se construian mediante RML. Pero Odoo a evolucionado al nuevo lenguaje de plantillas QWeb, el cual es más común para plataformas moviles, websites y reportes sin embargo existen áreas para las cuales aún se utiliza RML tales como las cabeceras y pie de página.
