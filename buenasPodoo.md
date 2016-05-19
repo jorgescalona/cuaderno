@@ -25,6 +25,11 @@ Ya Guido nos planteaba una dirección cuando explicaba que el código es leído 
 1. Carpeta **security** para la seguridad.
 1. Otras carpetas son obligatorias: i18n, static
 1. Un archivo para cada modelo
+1. se pueden usar dos convenciones para las clases: **snake_case** o **CamelCase**.
+1. Nombres de modelo: lista de palabras en minúsculas y singular (para módulos raiz), unidas por puntos. Deben ser nombres únicos.donde la primera palabra corresponderá a la aplicación principal con la cual está relacionada el módulo.
+1. El nombre de las clases python son locales para el archivo python donde son declaradas. El identificador usado es solo significativo para el código en ese archivo. Por lo que no existe el riesgo de colisión con otras posibles clases con el mismo nombre en otros módulos.
+
+
 
 ### A nivel de Campos:
 
