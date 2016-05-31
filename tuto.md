@@ -60,7 +60,9 @@ Al levantar con --restart=always docker se encarga de mantener siempre los servi
 reemplazamos el -d por -ti -u root y agregando /bin/bash al final y borrando el --restart=always, es decir:
 
 > docker run -ti -u root --link db:db -p 127.0.0.1:8069:8069 -p 8022:22 -v ~/odooVx/config:/etc/odoo -v ~/odooVx/sources:/mnt/extra-addons -v ~/odooVx/data_dir:/var/lib/odoo --name odoo /bin/bash
+
 o bien:
+
 > docker run --interactive --tty --link odoo:odoo --name odoo_sh busybox:latest /bin/sh
 
 
