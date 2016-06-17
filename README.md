@@ -15,4 +15,6 @@ Por ahora se compone de las siguientes hojas sueltas:
 1. tuto.md  -------------> trata sobre docker y un ejemplo de dockerización del entorno de desarrollo para odoo.
 1. virtenv.md -----------> virtual enviroments en python, howdo.
 1. pydiadoc.md ----------> libreria python para el diagramador dia q permite la creación de un diagrama UML a partir de un schema de bd.
-1. segodoo.md -----------> Niveles de seguridad e implementación en Odoo. 
+1. segodoo.md -----------> Niveles de seguridad e implementación en Odoo.
+
+
