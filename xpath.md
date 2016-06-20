@@ -90,14 +90,19 @@ Está expresión Xpath es una ruta relativa la cual selecciona todos los element
 **node test**
 
 * by name:
+    
     **office**
+    
     Está expresión Xpath contiene un nombre de nodo 'office' el cual selecciona todos los elementos hijos (de ese nodo contextual en especifico). Por eso no se especifica axisa alguna. La axisa child es asumida por defecto y es por ello que el principal tipo de nodo es la axisa child.
 
     **@location**
+    
     Esta expresión Xpath selecciona el atributo llamado 'location' del nodo contextual. la forma abreviada de la axisa 'attribute' es '@'.
 
 * by kind:
+    
     los kind que se pueden aplicar a un nodo son:
+    
     * document-node()
     * element()
     * attribute()
@@ -112,18 +117,23 @@ Está expresión Xpath es una ruta relativa la cual selecciona todos los element
     Ejemplos:
     
     **//attribute()**
+    
     Esta expresión Xpath selecciona todos los atributos nodales en el documento XML (independientemente del nombre o el tipo). El doble slash al principio de la expresión es la forma corta de la axisa 'descendant-or-self'.
 
     **//element()**
+    
     Esta expresión Xpath selecciona todos los elementos del documento XML (independientemente del nombre o el tipo).
 
     **//***
+    
     Esta Expresión Xpath es el equivalente del ejemplo anterior. En esta forma abreviada el comodín '*' es usado para denotar los elementos nodales.
 
 * by type:
+    
     Los tipos de nodos que pueden ser evaluados son cualquiera de los presentados en la tabla de built-in Schema datatypes (arriba expuesta), como también cualquier tipo definido por el usuario o tipos complejos. Ejemplo:
 
     **//element(*,xs:date)**
+    
     El primer argumento de la función en esta expresión Xpath es el nombre del nodo y el segundo argumento es el tipo. El asterisco es usado en el primer argumento y denota 'cualquier nombre'. La expresión selecciona todos los elementos del documento XML (insistintamente del nombre de elemento) los cuales tengan como tipo 'xs:date'.
 
 ### Enlaces de intéres y relacionados:
