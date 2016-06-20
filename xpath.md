@@ -41,9 +41,9 @@ La **función** es un nuevo tipo de item. En Xpath 2.0 un item en una secuencia 
 
 ### Enlaces de intéres y relacionados:
 
-[XML Path Language Xpath 3.0](https://www.w3.org/TR/xpath-30/)
-[XQuery and Xpath Data Model 3.0](https://www.w3.org/TR/xpath-datamodel-30/)
-[XPath and XQuery Functions and Operators 3.0](https://www.w3.org/TR/xpath-functions-30/)
+* [XML Path Language Xpath 3.0](https://www.w3.org/TR/xpath-30/)
+* [XQuery and Xpath Data Model 3.0](https://www.w3.org/TR/xpath-datamodel-30/)
+* [XPath and XQuery Functions and Operators 3.0](https://www.w3.org/TR/xpath-functions-30/)
 
 
 
