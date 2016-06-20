@@ -1,8 +1,7 @@
 Este documento es de libre acceso y uso bajo los términos expuestos en la licencia: Atribución-CompartirIgual 3.0 Venezuela (CC BY-SA 3.0 VE), https://creativecommons.org/licenses/by-sa/3.0/ve/ 
 se agrega una copia de la misma en este repositorio.
 
-Documento referencial con fines didácticos elaborado por jorgescalona @jorgemust
-aine jorgescalona@riseup.net.
+Documento referencial con fines didácticos elaborado por jorgescalona @jorgemustaine jorgescalona@riseup.net.
 Xpath
 =====
 
