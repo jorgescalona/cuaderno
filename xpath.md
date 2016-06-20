@@ -39,6 +39,93 @@ Un valor atómico es un valor permitido de un conjunto de valores para un tipo a
 
 La **función** es un nuevo tipo de item. En Xpath 2.0 un item en una secuencia solo podía ser un nodo o un valor atómico. En Xpath 3.0 puede ser un nodo, un valor atómico o una función.
 
+### Ubicación de la ruta (path)
+
+Ubicar rutas es Xpath es muy similar a usar la notación de path para archivos en el sistema de archivos que usemos y al igual que este ultimo tenemos rutas relativas y absolutas, donde una ruta absoluta siempre es evaluada desde la raiz del arbol "/" y una ruta relativa se referencia a un nodo en especifico. la raiz del documento "/" es el nivel más alto del XML y es el contenedor de todos los nodos que lo componen inclusive el mismo. Una ruta absoluta también puede empezar con: "//" (lo que se refiere a todos los subnodos de la raiz) lo que es distinto a "/" (se refiere a la raiz, todo el documento, incluyendo nodos, expresiones y/o funciones).
+Una ruta relativa es siempre evaluada desde el contexto de un nodo. Ejemplo:
+
+`office/employee/first_name[.='John']`
+
+El nodo contextual en el que esta evaluada está expresión es 'company' que es la raiz del archivo company_1.xml, el elemento padre es 'office'. El elemento contextual puede cambiar durante la evaluación de la expresión como lo indica el caracter punto '.' en este caso es usado para indicar el nodo contextual 'first_name' de esta forma se compara el valor de este nodo con el string 'John'.
+
+### Steps
+
+Una ruta de path contiene uno o más steps. Un step está compuesto de:
+
+1. una axis. Es la primera parte de una ubicación step la que determina la dirección a navegar con respecto de un nodo particular. Existen 13 diferentes axisas pertenecientes a dos grupos: **forward axis** (estás retornan en el mismo orden que se encuentran en el documento XML) o **reverse axis (retornan de forma inversa al documento XML). Se usa "::" para separar la axisa especifica del node test. **
+1. un node test. Aparece inmediatamente despues de la axis y pueden ser de tres tipos: por nombre, por kind o por tipo.
+1. Cero o más predicates.
+
+`axis::node_test[predicate]`
+
+`child::office[@location='Viena']`
+
+Está ultima expresión selecciona desde el nodo contextual todos los elementos hijos de 'office' que tengan un atributo llamado 'location' que a su vez sea igual a 'Vienna'.
+
+Algunas Forward Axis:
+
+* child
+* descendant
+* attribute
+* self
+* desendant-or-self
+* following-sibling
+* following
+* namespace
+
+Algunas Reverse Axis:
+
+* parent
+* ancestor
+* preceding-sibling
+* preceding
+* ancestor-or-self
+
+Ejemplo:
+
+`child::office`
+
+Está expresión Xpath es una ruta relativa la cual selecciona todos los elementos hijos del nodo contextual 'office'.
+
+**node test**
+
+* by name:
+    **office**
+    Está expresión Xpath contiene un nombre de nodo 'office' el cual selecciona todos los elementos hijos (de ese nodo contextual en especifico). Por eso no se especifica axisa alguna. La axisa child es asumida por defecto y es por ello que el principal tipo de nodo es la axisa child.
+
+    **@location**
+    Esta expresión Xpath selecciona el atributo llamado 'location' del nodo contextual. la forma abreviada de la axisa 'attribute' es '@'.
+
+* by kind:
+    los kind que se pueden aplicar a un nodo son:
+    * document-node()
+    * element()
+    * attribute()
+    * schema-element()
+    * schema-attribute()
+    * processing-instruction()
+    * comment()
+    * text()
+    * namespace-node()
+    * node()
+    
+    Ejemplos:
+    
+    **//attribute()**
+    Esta expresión Xpath selecciona todos los atributos nodales en el documento XML (independientemente del nombre o el tipo). El doble slash al principio de la expresión es la forma corta de la axisa 'descendant-or-self'.
+
+    **//element()**
+    Esta expresión Xpath selecciona todos los elementos del documento XML (independientemente del nombre o el tipo).
+
+    **//***
+    Esta Expresión Xpath es el equivalente del ejemplo anterior. En esta forma abreviada el comodín '*' es usado para denotar los elementos nodales.
+
+* by type:
+    Los tipos de nodos que pueden ser evaluados son cualquiera de los presentados en la tabla de built-in Schema datatypes (arriba expuesta), como también cualquier tipo definido por el usuario o tipos complejos. Ejemplo:
+
+    **//element(*,xs:date)**
+    El primer argumento de la función en esta expresión Xpath es el nombre del nodo y el segundo argumento es el tipo. El asterisco es usado en el primer argumento y denota 'cualquier nombre'. La expresión selecciona todos los elementos del documento XML (insistintamente del nombre de elemento) los cuales tengan como tipo 'xs:date'.
+
 ### Enlaces de intéres y relacionados:
 
 * [XML Path Language Xpath 3.0](https://www.w3.org/TR/xpath-30/)
