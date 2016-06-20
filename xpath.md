@@ -135,12 +135,53 @@ Está expresión Xpath es una ruta relativa la cual selecciona todos los element
     
     El primer argumento de la función en esta expresión Xpath es el nombre del nodo y el segundo argumento es el tipo. El asterisco es usado en el primer argumento y denota 'cualquier nombre'. La expresión selecciona todos los elementos del documento XML (insistintamente del nombre de elemento) los cuales tengan como tipo 'xs:date'.
 
+### Predicates
+
+Los predicados son usados para encontrar un nodo especifico o un nodo que contiene valores especificos. Estos siempre estan embebidos entre corchetes. Ejemplos:
+
+**Path Expression** | **Result**
+-- | --
+/bookstore/book[1] | selecciona el primer elemento 'book' que es hijo de 'bookstore'.
+/bookstore/book[last()] | selecciona el ultimo elemento 'book' que es hijo de 'bookstore'
+/bookstore/book[last()-1] | seleciiona el penultimo elemento 'book' que es hijo de 'bookstore'
+/bookstore/book[position()<3] | selecciona los dos primeros elementos 'book' que son hijos de 'bookstore'
+//title[@lang] | selecciona todos los elementos title que poseen un atributo llamado 'lang'
+//title[@lang='en'] | selecciona todos los elementos title cuyo atributo 'lang' es igual a 'en'
+/bookstore/book[price>35.00] | selecciona todos los elementos 'book' hijos de 'bookstore' que tengan un precio por encima de 35.00
+/bookstore/book[price>35.00]/title | selecciona todos los elementos title hijos de 'book' y nietos de 'bookstore' que tengan un precio por encima de 35.00
+
+### Seleccionando nodos desconocidos.
+
+Los comodines en Xpath pueden ser usados para seleccionar nodos XML desconocidos.
+
+**comodín** | **Descripción**
+-- | --
+* | cualquier elemento nodal
+@* | cualquier atributo nodal
+node() | cualquier nodo de cualquier tipo
+
+En la siguiente tabla se listan algunas expresiones Xpath y su respectivo resultado:
+
+**Path Expression** | **Descripción**
+-- | --
+/bookstore/* | selecciona todos los elementos hijos de 'bookstore'
+//* | selecciona todos los elementos en el documento
+//title[@*] | selecciona todos los elementos 'title' que tengan un atributo de cualquier indole
+
+### Selecionando varios Paths
+
+Usando el operador '|' se puede seleccionar varios paths en una expresión. Ejemplo:
+
+`//book/title | //price`  selecciona todos los 'title' AND 'price' elementos hijos de 'book'
+`//title | //price` selecciona todos los elementos 'title' AND 'price' en el documento
+`/bookstore/book/title | //price` selecciona todos los elementos 'title' AND 'price' hijos de 'book' y nietos de 'bookstore' en el documento
+
 ### Enlaces de intéres y relacionados:
 
 * [XML Path Language Xpath 3.0](https://www.w3.org/TR/xpath-30/)
 * [XQuery and Xpath Data Model 3.0](https://www.w3.org/TR/xpath-datamodel-30/)
 * [XPath and XQuery Functions and Operators 3.0](https://www.w3.org/TR/xpath-functions-30/)
-
+* [tuto Xpath](http://www.w3schools.com/xsl/xpath_intro.asp)
 
 
 
