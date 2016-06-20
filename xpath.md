@@ -140,8 +140,8 @@ Está expresión Xpath es una ruta relativa la cual selecciona todos los element
 Los predicados son usados para encontrar un nodo especifico o un nodo que contiene valores especificos. Estos siempre estan embebidos entre corchetes. Ejemplos:
 
 **Path Expression** | **Result**
--- | --
-/bookstore/book[1] | selecciona el primer elemento 'book' que es hijo de 'bookstore'.
+--------------------|---------------------------------------------------------------- 
+/bookstore/book[1]  | selecciona el primer elemento 'book' que es hijo de 'bookstore'.
 /bookstore/book[last()] | selecciona el ultimo elemento 'book' que es hijo de 'bookstore'
 /bookstore/book[last()-1] | seleciiona el penultimo elemento 'book' que es hijo de 'bookstore'
 /bookstore/book[position()<3] | selecciona los dos primeros elementos 'book' que son hijos de 'bookstore'
@@ -155,7 +155,7 @@ Los predicados son usados para encontrar un nodo especifico o un nodo que contie
 Los comodines en Xpath pueden ser usados para seleccionar nodos XML desconocidos.
 
 **comodín** | **Descripción**
--- | --
+------------|-----------------
 * | cualquier elemento nodal
 @* | cualquier atributo nodal
 node() | cualquier nodo de cualquier tipo
@@ -163,7 +163,7 @@ node() | cualquier nodo de cualquier tipo
 En la siguiente tabla se listan algunas expresiones Xpath y su respectivo resultado:
 
 **Path Expression** | **Descripción**
--- | --
+--------------------|-----------------
 /bookstore/* | selecciona todos los elementos hijos de 'bookstore'
 //* | selecciona todos los elementos en el documento
 //title[@*] | selecciona todos los elementos 'title' que tengan un atributo de cualquier indole
@@ -173,7 +173,9 @@ En la siguiente tabla se listan algunas expresiones Xpath y su respectivo result
 Usando el operador '|' se puede seleccionar varios paths en una expresión. Ejemplo:
 
 `//book/title | //price`  selecciona todos los 'title' AND 'price' elementos hijos de 'book'
+
 `//title | //price` selecciona todos los elementos 'title' AND 'price' en el documento
+
 `/bookstore/book/title | //price` selecciona todos los elementos 'title' AND 'price' hijos de 'book' y nietos de 'bookstore' en el documento
 
 ### Enlaces de intéres y relacionados:
