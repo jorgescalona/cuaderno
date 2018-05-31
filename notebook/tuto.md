@@ -55,6 +55,15 @@ Las carpetas config se guardaran las configuraciones y en sources nuestros addon
 
 Al levantar con --restart=always docker se encarga de mantener siempre los servicios arriba, si reinicias el servidor los servicios se leventan solos
 
+Luego cualquier inspección puede hacerse con:
+
+> $docker exec -ti sha /bin/bash
+
+o en modo root:
+
+>$docker exec -u root -ti sha /bin/bash
+
+
 ### iniciar el servicio en modo interactivo 
 
 reemplazamos el -d por -ti -u root y agregando /bin/bash al final y borrando el --restart=always, es decir:
