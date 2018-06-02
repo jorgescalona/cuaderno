@@ -27,7 +27,44 @@ la opción -d en docker hace que el container se ejecute en background, puede da
 
 > $docker exec -ti 9d7cebd75dcf /bin/bash
 
-### Al instalar virtualenv en debian
-## agregar ruta al path
+# Al instalar virtualenv en debian
+### agregar ruta al path
 
 > export PATH=$PATH:~/.local/bin/
+
+### Una vez está corriendo postgresql en un contenedor gestionar bd desde el mismo
+
+> $psql -U odoo
+
+ref:
+
+https://stackoverflow.com/questions/37694987/connecting-to-postgresql-in-a-docker-container-from-outside
+
+### Usando t2d
+
+agregar a bashrc el alias correspondiente:
+
+> alias t2d='travisfile2dockerfile --root-path=${HOME}/.t2d'
+
+hacer pull de la imagen base:
+
+> docker pull vauxoo/odoo-80-image-shippable-auto
+
+Por ultimo clonar un proyecto el mismo debe incluir su respectivo .travis.yml
+
+> t2d git@github.com:Vauxoo/forecast.git 8.0
+
+ref:
+
+**https://github.com/Vauxoo/travis2docker**
+
+### OCA guidelines & Documentation
+
+**https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md**
+**https://odoo-community.org/page/documentation**
+
+
+
+### Guardando la Configuración de una Instancia de Odoo en un Archivo
+
+http://pythonpiura.org/posts/guardando-la-configuracion-de-una-instancia-de-odoo-en-un-archivo/
