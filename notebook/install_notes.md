@@ -68,3 +68,67 @@ ref:
 ### Guardando la Configuración de una Instancia de Odoo en un Archivo
 
 http://pythonpiura.org/posts/guardando-la-configuracion-de-una-instancia-de-odoo-en-un-archivo/
+
+### PIPENV deploy example
+
+Sobre las ventajas de la nueva forma de despliegue de enviroments en Python [pipenv](https://realpython.com/pipenv-guide/ "PipEnv") sobre virtualenv por ejemplo
+
+### Corriendo e instalando un nuevo modulo de odoo
+
+> $/home/odoo/odoo-10.0/odoo-bin -d openerp_test -c /home/odoo/odoo-10.0/myodoo.cfg -i openacademy
+
+
+# Instalación de Odoo en un contenedor shipeable de Vauxoo
+
+>$apt-get install -y git python3.5 postgresql xz-utils wget fontconfig libfreetype6 libx11-6 libxext6 libxrender1 node-less node-clean-css xfonts-75dpi
+>$apt-get install -y gcc python3.5-dev libxml2-dev libxslt1-dev libevent-dev libsasl2-dev libldap2-dev libpq-dev libpng-dev libjpeg-dev
+>$apt-get install -y python3-pip
+>$git config --global user.name "Your Name"
+>$git config --global user.email youremail@example.com
+>$mkdir ~/odoo-dev && cd ~/odoo-dev
+>$git clone -b 11.0 --single-branch https://github.com/odoo/odoo.git
+>$su odoo
+>$virtualenv -p python3 ~/odoo-11.0
+>$source ~/odoo-11.0/bin/activate
+>$pip install -r requirements.txt
+
+>$apt-get install -y npm
+>$ln -s /usr/bin/nodejs /usr/bin/node
+>$npm install -g less less-plugin-clean-css
+>$apt-get install -y node-less
+
+
+#  V2
+
+**Para crear el contenedor a partir de la imagen shippeable de Vauxoo:**
+
+>$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/id_rsa.pub:$HOME/.ssh/authorized_keys --name odoo-v10-0.2 e05e703818e9
+
+**Una vez en el contenedor sha: a90d7100a423**
+
+>$whoami
+>>> root
+>$apt-get update && apt-get upgrade
+>$apt-get install -y git python3.5 xz-utils wget fontconfig libfreetype6 libx11-6 libxext6 libxrender1 node-less node-clean-css xfonts-75dpi aptitude
+>$git config --global user.name "Your Name"
+>$git config --global user.email youremail@example.com
+
+**el comando -v en el docker run inicial creo una carpeta jorge con las ssh keys copiarlas al path home de odoo**
+
+>$cp -v ../jorge/.ssh/authorized_keys /home/odoo/.ssh/id_rsa.pub
+
+**ubicado en /home/odoo hacer:**
+
+>$git clone -b 11.0 --single-branch https://github.com/odoo/odoo.git
+
+>$su odoo %% cd /home/odoo/odoo
+>$pip install -r requeriments.txt
+>$npm install -g less less-plugin-clean-css
+>$python odoo-bin -d odoo_test --db-filter=odoo_test
+
+### Notas importantes sobre la instalación:
+
+* La imagen shippeable de vauxoo ya tiene todo lo necesario y hasta los virtualenv de python y node, intentar correr un venv adicional es una inception.
+
+
+
