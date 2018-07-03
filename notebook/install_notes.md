@@ -84,6 +84,8 @@ Sobre las ventajas de la nueva forma de despliegue de enviroments en Python [pip
 >$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/:/home/odoo/.ssh/ --name odoo-v10-0.2 e05e703818e9
 
 **Una vez en el contenedor:**
+>$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/id_rsa.pub:$HOME/.ssh/authorized_keys --name odoo-v10-0.2 e05e703818e9
+
 
 >$whoami
 >>> root
@@ -91,6 +93,12 @@ Sobre las ventajas de la nueva forma de despliegue de enviroments en Python [pip
 >$apt-get install -y node-less node-clean-css xfonts-75dpi aptitude
 >$git config --global user.name "Your Name"
 >$git config --global user.email youremail@example.com
+>$git config --global user.name "Your Name"
+>$git config --global user.email youremail@example.com
+
+**el comando -v en el docker run inicial creo una carpeta jorge con las ssh keys copiarlas al path home de odoo**
+
+>$cp -v ../jorge/.ssh/authorized_keys /home/odoo/.ssh/id_rsa.pub
 
 **ubicado en /home/odoo hacer:**
 
