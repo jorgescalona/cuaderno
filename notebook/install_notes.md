@@ -81,33 +81,24 @@ Sobre las ventajas de la nueva forma de despliegue de enviroments en Python [pip
 
 **Para crear el contenedor a partir de la imagen shippeable de Vauxoo:**
 
->$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/:/home/odoo/.ssh/ --name odoo-v10-0.2 e05e703818e9
-
-**Una vez en el contenedor:**
->$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/id_rsa.pub:$HOME/.ssh/authorized_keys --name odoo-v10-0.2 e05e703818e9
-
+>$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/:/home/odoo/.ssh/ --name odoo-v10-1.1 sha_container
 
 >$whoami
 >>> root
 >$apt-get update && apt-get upgrade
 >$apt-get install -y node-less node-clean-css xfonts-75dpi aptitude
->$git config --global user.name "Your Name"
->$git config --global user.email youremail@example.com
->$git config --global user.name "Your Name"
->$git config --global user.email youremail@example.com
-
-**el comando -v en el docker run inicial creo una carpeta jorge con las ssh keys copiarlas al path home de odoo**
-
->$cp -v ../jorge/.ssh/authorized_keys /home/odoo/.ssh/id_rsa.pub
 
 **ubicado en /home/odoo hacer:**
+
+>$git config --global user.name "Your Name"
+>$git config --global user.email youremail@example.com
 
 >$git clone -b 11.0 --single-branch https://github.com/odoo/odoo.git
 
 >$su odoo %% cd /home/odoo/odoo
->$pip install -r requeriments.txt
+>$pip install -r requirements.txt
 >$npm install -g less less-plugin-clean-css
->$python odoo-bin -d odoo_test --db-filter=odoo_test
+>$python odoo-bin -d odoo_test
 
 ### Notas importantes sobre la instalación:
 
