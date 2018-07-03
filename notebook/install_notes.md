@@ -68,3 +68,43 @@ ref:
 ### Guardando la Configuración de una Instancia de Odoo en un Archivo
 
 http://pythonpiura.org/posts/guardando-la-configuracion-de-una-instancia-de-odoo-en-un-archivo/
+
+### PIPENV deploy example
+
+Sobre las ventajas de la nueva forma de despliegue de enviroments en Python [pipenv](https://realpython.com/pipenv-guide/ "PipEnv") sobre virtualenv por ejemplo
+
+### Corriendo e instalando un nuevo modulo de odoo
+
+> $/home/odoo/odoo-10.0/odoo-bin -d openerp_test -c /home/odoo/odoo-10.0/myodoo.cfg -i openacademy
+
+#  V2
+
+**Para crear el contenedor a partir de la imagen shippeable de Vauxoo:**
+
+>$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/:/home/odoo/.ssh/ --name odoo-v10-0.2 e05e703818e9
+
+**Una vez en el contenedor:**
+
+>$whoami
+>>> root
+>$apt-get update && apt-get upgrade
+>$apt-get install -y node-less node-clean-css xfonts-75dpi aptitude
+>$git config --global user.name "Your Name"
+>$git config --global user.email youremail@example.com
+
+**ubicado en /home/odoo hacer:**
+
+>$git clone -b 11.0 --single-branch https://github.com/odoo/odoo.git
+
+>$su odoo %% cd /home/odoo/odoo
+>$pip install -r requeriments.txt
+>$npm install -g less less-plugin-clean-css
+>$python odoo-bin -d odoo_test --db-filter=odoo_test
+
+### Notas importantes sobre la instalación:
+
+* La imagen shippeable de vauxoo ya tiene todo lo necesario y hasta los virtualenv de python y node, intentar correr un venv adicional es una inception.
+
+### Generando ssh keys
+
+* ssh-keygen -t rsa -C "escajorge@gmail.com.com"
