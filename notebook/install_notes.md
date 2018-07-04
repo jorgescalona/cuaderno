@@ -16,10 +16,12 @@
 
 **también se puede revisar los siguientes cuatro comandos:**
 
-> $docker container prune -f
-> $docker image prune -f
-> $docker network prune -f
-> $docker volume prune -f
+~~~
+$docker container prune -f
+$docker image prune -f
+$docker network prune -f
+$docker volume prune -f
+~~~
 
 ### cambiar alguna variable interna de un contenedor en background
 
@@ -30,15 +32,9 @@ la opción -d en docker hace que el container se ejecute en background, puede da
 # Al instalar virtualenv en debian
 ### agregar ruta al path
 
-> export PATH=$PATH:~/.local/bin/
-
-### Una vez está corriendo postgresql en un contenedor gestionar bd desde el mismo
-
-> $psql -U odoo
-
-ref:
-
-https://stackoverflow.com/questions/37694987/connecting-to-postgresql-in-a-docker-container-from-outside
+~~~
+$export PATH=$PATH:~/.local/bin/
+~~~
 
 ### Usando t2d
 
@@ -73,32 +69,28 @@ http://pythonpiura.org/posts/guardando-la-configuracion-de-una-instancia-de-odoo
 
 Sobre las ventajas de la nueva forma de despliegue de enviroments en Python [pipenv](https://realpython.com/pipenv-guide/ "PipEnv") sobre virtualenv por ejemplo
 
-### Corriendo e instalando un nuevo modulo de odoo
-
-> $/home/odoo/odoo-10.0/odoo-bin -d openerp_test -c /home/odoo/odoo-10.0/myodoo.cfg -i openacademy
-
 #  V2
 
 **Para crear el contenedor a partir de la imagen shippeable de Vauxoo:**
 
->$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/:/home/odoo/.ssh/ --name odoo-v10-1.1 sha_container
+~~~
+$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/:/home/odoo/.ssh/ --name odoo-v10-1.1 sha_container
+~~~
 
->$whoami
->>> root
->$apt-get update && apt-get upgrade
->$apt-get install -y node-less node-clean-css xfonts-75dpi aptitude
+~~~
+$apt-get update && apt-get upgrade
+$apt-get install -y node-less node-clean-css xfonts-75dpi aptitude
 
-**ubicado en /home/odoo hacer:**
+ubicado en /home/odoo hacer:
 
->$git config --global user.name "Your Name"
->$git config --global user.email youremail@example.com
-
->$git clone -b 11.0 --single-branch https://github.com/odoo/odoo.git
-
->$su odoo %% cd /home/odoo/odoo
->$pip install -r requirements.txt
->$npm install -g less less-plugin-clean-css
->$python odoo-bin -d odoo_test
+$git config --global user.name "Your Name"
+$git config --global user.email youremail@example.com
+$git clone -b 11.0 --single-branch https://github.com/odoo/odoo.git
+$su odoo %% cd /home/odoo/odoo
+$pip install -r requirements.txt
+$npm install -g less less-plugin-clean-css
+$python odoo-bin -d odoo_test
+~~~
 
 ### Notas importantes sobre la instalación:
 
