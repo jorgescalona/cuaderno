@@ -74,12 +74,12 @@ Sobre las ventajas de la nueva forma de despliegue de enviroments en Python [pip
 **Para crear el contenedor a partir de la imagen shippeable de Vauxoo:**
 
 ~~~
-$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/:/home/odoo/.ssh/ --name odoo-v10-1.1 sha_container
+$docker run -itP -e LANG=C.UTF-8 --entrypoint=tmux -v $HOME/.ssh/:/home/odoo/.ssh/ --name odoo-v10-1.1 sha_image
 ~~~
 
 ~~~
 $apt-get update && apt-get upgrade
-$apt-get install -y node-less node-clean-css xfonts-75dpi aptitude
+$apt-get install -y node-less node-clean-css xfonts-75dpi aptitude less more
 
 ubicado en /home/odoo hacer:
 
@@ -98,4 +98,4 @@ $python odoo-bin -d odoo_test
 
 ### Generando ssh keys
 
-* ssh-keygen -t rsa -C "escajorge@gmail.com.com"
+* ssh-keygen -t rsa -C "youremail@example.com"
